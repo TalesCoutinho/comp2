@@ -28,7 +28,8 @@ public class TuiterLite<T> {
     /**
      * Cadastra um usuário, retornando o novo objeto Usuario criado.
      * Se o email informado já estiver em uso, não faz nada e retorna null.
-     * @param nome O nome do usuário.
+     *
+     * @param nome  O nome do usuário.
      * @param email O e-mail do usuário (precisa ser único no sistema).
      * @return O Usuario criado.
      */
@@ -50,33 +51,26 @@ public class TuiterLite<T> {
      * Se o usuário não estiver cadastrado, não faz nada e retorna null.
      *
      * @param usuario O autor do tuíte
-     * @param texto O texto desejado
+     * @param texto   O texto desejado
      * @return Um "tuíte", que será devidamente publicado no sistema
      */
-    public Tuite tuitarAlgo(Usuario usuario, String texto){
+    public Tuite tuitarAlgo(Usuario usuario, String texto) throws TuiteMuitoLongoException {
+
+        if (usuarioByEmail.containsValue(usuario.getEmail())) {
+            throw new NullPointerException();
+        }
 
         Usuario usuarioExistente = this.usuarioByEmail.get(usuario.getEmail());
         // verifica se o usuário é conhecido
-        try {
-            String email = usuarioExistente.getEmail();
-        } catch (NullPointerException e){
-            System.out.println("Não deve ser possível tuitar algo se o usuário é desconhecido");
-            return null;
-        }
 
         Tuite tuite = new Tuite(usuario, texto);
-        /*
+
+
         this.textoInput = tuite.getTexto();
-        if(textoInput.length() > TAMANHO_MAXIMO_TUITES) {
+        if (textoInput.length() > TAMANHO_MAXIMO_TUITES) {
             throw new TuiteMuitoLongoException();
         }
-        */
-        try {
-            checarTamanhoDoTuite(texto);
-        } catch (TuiteMuitoLongoException e){
-            System.out.println("Tuite muito longo, tamanho maximo de "+ TAMANHO_MAXIMO_TUITES);
-            return null;
-        }
+
         Collection<String> hashtagsDoTuite = tuite.getHashtags();
 
         for (String hashtag : hashtagsDoTuite) {
@@ -95,6 +89,7 @@ public class TuiterLite<T> {
     /**
      * Retorna a hashtag mais comum dentre todas as que já apareceram.
      * A cada tuíte criado, hashtags devem ser detectadas automaticamente para que este método possa funcionar.
+     *
      * @return A hashtag mais comum, ou null se nunca uma hashtag houver sido tuitada.
      */
     public String getHashtagMaisComum() {
@@ -144,11 +139,5 @@ public class TuiterLite<T> {
         System.out.println(minhaString);
 
     }
-
-    public void checarTamanhoDoTuite(String texto) throws TuiteMuitoLongoException{
-        this.textoInput = texto;
-        if (textoInput.length() > TAMANHO_MAXIMO_TUITES) {
-            throw new TuiteMuitoLongoException();
-        } else return;
-    }
 }
+
