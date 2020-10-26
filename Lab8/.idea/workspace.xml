@@ -50,6 +50,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.capture" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -58,6 +59,31 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.main">
+    <configuration name="gerarTXT" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gerarTXT" />
+      <module name="Lab8" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="main" />
+      <module name="Lab8" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.main" />
+      <item itemvalue="Application.gerarTXT" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.gerarTXT" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -90,13 +116,129 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="#Project_Structure/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603665359468" />
+    <state x="341" y="145" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603688962488">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="341" y="145" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603688962488" />
+    <state x="574" y="231" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603680796623">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="574" y="231" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603680796623" />
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1603692712416">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603692712416" />
+    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1603692712416">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603692712416" />
+    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1603692712416">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603692712416" />
+    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1603692712416">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603692712416" />
+    <state width="1557" height="276" key="GridCell.Tab.1.bottom" timestamp="1603692579794">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="276" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603692579794" />
+    <state width="1557" height="276" key="GridCell.Tab.1.center" timestamp="1603692579794">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="276" key="GridCell.Tab.1.center/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603692579794" />
+    <state width="1557" height="276" key="GridCell.Tab.1.left" timestamp="1603692579794">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="276" key="GridCell.Tab.1.left/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603692579794" />
+    <state width="1557" height="276" key="GridCell.Tab.1.right" timestamp="1603692579794">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="276" key="GridCell.Tab.1.right/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603692579794" />
+    <state x="301" y="74" key="SettingsEditor" timestamp="1603684052449">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="301" y="74" key="SettingsEditor/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603684052449" />
     <state x="571" y="243" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1603671366718">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="571" y="243" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603671366718" />
+    <state x="335" y="165" width="929" height="630" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1603689833689">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="335" y="165" width="929" height="630" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603689833689" />
     <state x="691" y="346" width="1184" height="848" key="dock-window-1" timestamp="1603670824165">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="691" y="346" width="1184" height="848" key="dock-window-1/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603670824165" />
+    <state x="1722" y="275" width="1184" height="598" key="dock-window-2" timestamp="1603681966020">
+      <screen x="1600" y="217" width="1360" height="728" />
+    </state>
+    <state x="1722" y="275" width="1184" height="598" key="dock-window-2/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603681966020" />
+    <state x="530" y="187" key="extract.method.dialog" timestamp="1603681631911">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="530" y="187" key="extract.method.dialog/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603681631911" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main.java</url>
+          <line>92</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Turma.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Turma.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Turma.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Turma.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Turma.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Turma.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Turma.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Turma.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Turma.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.NoSuchElementException" package="java.util" />
+          <option name="timeStamp" value="14" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

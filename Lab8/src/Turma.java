@@ -23,13 +23,26 @@ public class Turma {
         for(Map.Entry<String,Aluno> entry : alunos.entrySet()){
             String key = entry.getKey();
             Aluno value = entry.getValue();
-            if(value.getNota(materia) == maiorNota){
+            if((Float) value.getNota(materia) > maiorNota){
                 maiorNota = value.getNota(materia);
                 melhorAluno = value;
             }
         }
         return melhorAluno;
         }
+
+
+    public float media(String materia){
+        float contador = 0;
+        for(Map.Entry<String,Aluno> entry : alunos.entrySet()){
+            String key = entry.getKey();
+            Aluno value = entry.getValue();
+            contador += value.getNota(materia);
+        }
+        return contador/alunos.size();
+    }
+
+
     //usa a mesma iteração do método maior nota, mas com a finalidade de contar os alunos reprovados.
     public int quantosReprovados(String materia){
         int reprovados = 0;
@@ -42,6 +55,7 @@ public class Turma {
             }
         return reprovados;
         }
+
 
     //não queria copiar o método de cima e mudar um sinal, mas achei que criar uma classe que fizesse essa operação fosse demais.
     public int quantosAprovados(String materia){

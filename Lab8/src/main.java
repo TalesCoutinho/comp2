@@ -19,14 +19,14 @@ public class main {
     private Long DRE = null;
     private Float nota = null;
 
-    Scanner scanner = new Scanner(System.in);
 
 
     private int linhasInvalidas = 0;
     private int linhasValidas = 0;
 
 
-    public void main(String[] args){
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
         //coloquei o while para caso de FileNotFoundException poder voltar pro input do usuário
         while(true) {
 
@@ -39,15 +39,29 @@ public class main {
                 calcularMedia(caminhoDoArquivo);
             } catch (FileNotFoundException e) {
                 System.out.println("Não foi possível encontrar o aquivo.");
+                continue;
             } catch (ArquivoCorrompidoException e){
                 //A própria excessão dá a mensagem de erro com o número de linhas inválidas
+                continue;
             }
             break;
         }
     }
 
-    private float calcularMedia(String nomeDoArquivo) throws FileNotFoundException, ArquivoCorrompidoException{
+    private static void calcularMedia(String nomeDoArquivo) throws FileNotFoundException, ArquivoCorrompidoException{
 
+         float media;
+
+         String nome = null;
+         Long DRE = null;
+         Float nota = null;
+
+
+
+         int linhasInvalidas = 0;
+         int linhasValidas = 0;
+        String materia = null;
+        Scanner leitor = null;
         //Abre o arquivo
         File arquivo = new File(nomeDoArquivo);
         leitor = new Scanner(arquivo);
@@ -69,51 +83,59 @@ public class main {
         //Checa se a primeira linha indica a matéria, caso não indique, falha a leitura
         try{
             PegarMateria.pegarMateria((String)leitor.next());
-            this.materia = leitor.next();
+            materia = leitor.next();
         } catch (ArquivoInvalidoException e){
             e.printStackTrace();
         }
         //Passa preenchendo os campos
-        while (leitor.hasNextLine()){
-            switch (leitor.next()){
-                case "Nome:":
-                    this.nome = leitor.next();
-                    linhasValidas++;
-                    break;
-                case "DRE:":
-                    this.DRE = Long.parseLong(leitor.next());
-                    linhasValidas++;
-                    break;
-                case "Float:":
-                    this.nota = Float.parseFloat(leitor.next());
-                    linhasValidas++;
-                    break;
-                default:
-                    this.DRE = null;
-                    this.nome = null;
-                    this.nota = null;
-                    linhasInvalidas++;
+        String a = null;
+        try {
+            while (leitor.hasNextLine()) {
+                a = leitor.next();
+
+                switch (a) {
+                    case "Nome:":
+                        nome = leitor.next();
+                        linhasValidas++;
+                        break;
+                    case "DRE:":
+                        DRE = Long.parseLong(leitor.next());
+                        linhasValidas++;
+                        break;
+                    case "Nota:":
+                        nota = Float.parseFloat(leitor.next());
+                        linhasValidas++;
+                        break;
+                    default:
+                        if (!a.equals("Nome:") || !a.equals("DRE") || !a.equals("Nota")) {
+                            DRE = null;
+                            nome = null;
+                            nota = null;
+                            linhasInvalidas++;
+                        }
+                }
+                if (DRE != null && nome != null && nota != null) {
+                    //Cria um aluno preenchendo a turma e reseta os campos para que o if faça sentido
+                    turma.adicionarAluno(nome, DRE, nota, materia);
+                    DRE = null;
+                    nome = null;
+                    nota = null;
+                }
             }
-            if(DRE != null && nome != null && nota != null) {
-                //Cria um aluno preenchendo a turma e reseta os campos para que o if faça sentido
-                turma.adicionarAluno(nome, DRE, nota, materia);
-                this.DRE = null;
-                this.nome = null;
-                this.nota = null;
-            }
-        }
+        } catch (Exception e){
+        linhasInvalidas++;
+    }
         if (linhasInvalidas > linhasValidas){
             throw new ArquivoCorrompidoException(linhasInvalidas);
         }
 
         leitor.close();
 
-        System.out.println("A maior nota foi do: " + turma.maiorNota(materia).getNome());
-        System.out.println("Passaram: " + turma.quantosAprovados(materia) + "alunos.");
-        System.out.println("Reprovaram: " + turma.quantosReprovados(materia) + "alunos.");
+        System.out.println("A media da turma foi: "+ turma.media(materia));
+        System.out.println("A maior nota foi dx: " + turma.maiorNota(materia).getNome());
+        System.out.println("Passaram: " + turma.quantosAprovados(materia) + " alunos.");
+        System.out.println("Reprovaram: " + turma.quantosReprovados(materia) + " alunos.");
 
-            //
-
-        return media;
+        return;
     }
 }
