@@ -81,9 +81,33 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="580" y="171" key="FileChooserDialogImpl" timestamp="1603953660873">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="580" y="171" key="FileChooserDialogImpl/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603953660873" />
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1603953665107">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603953665107" />
+    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1603953665107">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603953665107" />
+    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1603953665107">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603953665107" />
+    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1603953665107">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603953665107" />
     <state x="504" y="321" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1603953551536">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="504" y="321" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603953551536" />
+    <state x="391" y="50" key="new project wizard" timestamp="1603953663166">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="391" y="50" key="new project wizard/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603953663166" />
   </component>
 </project>
