@@ -4,7 +4,8 @@ public class Tuite<T> {
 
     private final Usuario autor;
     private final String texto;
-    private HashMap<String, Integer> hashtags/
+    private ArrayList<String> hashtags = new ArrayList<>();
+    private T anexo = null;
 
     // hashtags?
     // objeto anexado?
@@ -14,12 +15,12 @@ public class Tuite<T> {
         this.texto = texto;
     }
 
-    public void anexarAlgo(Object anexo) {
-        // ToDo IMPLEMENT ME!!!!
+    public void anexarAlgo(T anexo) {
+        this.anexo = anexo;
     }
 
     public Object getAnexo() {
-        return null;  // ToDo IMPLEMENT ME!!!
+       return anexo;
     }
 
     public Usuario getAutor() {
@@ -31,6 +32,14 @@ public class Tuite<T> {
     }
 
     public ArrayList<String> getHashtags() {
-        return null;  // ToDo IMPLEMENT ME!!!
+        Scanner leitor = new Scanner(texto);
+        String palavra = null;
+        while (leitor.hasNext()) {
+            palavra = leitor.next();
+            if (palavra.startsWith("#")) {
+                hashtags.add(palavra);
+            }
+        }
+        return hashtags;
     }
 }

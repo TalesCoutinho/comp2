@@ -58,7 +58,7 @@ public class TuiterLiteTest {
             }
             String texto = sb.toString();
 
-            assertNull("Um tuite maior do que o tamanho máximo deve lançar uma TamanhoMaximoExcedidoException",
+            assertNull("Um tuite maior do que o tamanho máximo deve ser ignorado",
                     tuiterLite.tuitarAlgo(usuario, texto));
         }
     }
@@ -68,7 +68,6 @@ public class TuiterLiteTest {
     public void testeAnexo() {
 
         Tuite tuite = tuiterLite.tuitarAlgo(usuario, "Testando");
-
         // vamos anexar a foto do usuário no tuíte que ele acabou de fazer
         tuite.anexarAlgo(usuario.getFoto());
         assertEquals("O tuíte deve retornar corretamente o objeto que foi anexado a ele",

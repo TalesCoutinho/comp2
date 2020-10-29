@@ -1,3 +1,5 @@
+import java.util.*;
+
 /**
  *  Esta classe implementa um sistema de mensagens curtas estilo Twitter.
  *  É preciso cadastrar um usuário, identificado pelo seu e-mail, para que tuítes possam ser feitos.
@@ -11,6 +13,17 @@ public class TuiterLite<T> {
 
     public static int TAMANHO_MAXIMO_TUITES = 120;
 
+    private HashMap<String, Usuario> usuariosCadastrados = new HashMap<>();
+
+    private HashMap<String, Integer> hashtags = new HashMap<>();
+
+    private Object anexo = null;
+
+
+    public TuiterLite(){
+        //ToDo implement me!!!
+    }
+
     /**
      * Cadastra um usuário, retornando o novo objeto Usuario criado.
      * Se o email informado já estiver em uso, não faz nada e retora null.
@@ -19,9 +32,12 @@ public class TuiterLite<T> {
      * @return O Usuario criado.
      */
     public Usuario cadastrarUsuario(String nome, String email) {
-        // ToDo IMPLEMENT ME!!!
-        return null;
+        if(!usuariosCadastrados.containsKey(email)){
+            usuariosCadastrados.put(email, new Usuario(nome, email));
+        }
+        return new Usuario(nome,email);
     }
+
 
     /**
      * Tuíta algo, retornando o objeto Tuíte criado.
@@ -33,9 +49,24 @@ public class TuiterLite<T> {
      * @return Um "tuíte", que será devidamente publicado no sistema
      */
     public Tuite tuitarAlgo(Usuario usuario, String texto) {
-        // ToDo IMPLEMENT ME!!!
-        return null;
+        if(texto.length() > TAMANHO_MAXIMO_TUITES || !usuariosCadastrados.containsKey(usuario.getEmail())){
+            return null;
+        }
+        Tuite tuite = new Tuite(usuario, texto);
+        Integer contador;
+        for(Object a : tuite.getHashtags()){
+            contador = hashtags.get(a);
+            if(contador == null){
+                hashtags.put((String) a, 1);
+            }else{
+                hashtags.put((String) a, contador + 1);
+            }
+        }
+        usuario.adicionarTuite();
+        return tuite;
     }
+
+
 
     /**
      * Retorna a hashtag mais comum dentre todas as que já apareceram.
@@ -43,7 +74,14 @@ public class TuiterLite<T> {
      * @return A hashtag mais comum, ou null se nunca uma hashtag houver sido tuitada.
      */
     public String getHashtagMaisComum() {
-        // ToDo IMPLEMENT ME!!!
-        return null;
+        String hashtagMaisUsada = null;
+        Integer contador = 0;
+        for (String a: hashtags.keySet()){
+            if(hashtags.get(a) > contador){
+                contador = hashtags.get(a);
+                hashtagMaisUsada = a;
+            }
+        }
+        return hashtagMaisUsada;
     }
 }

@@ -47,6 +47,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lab 5/TuiterLite" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -106,6 +107,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="426" y="108" key="#Inspections" timestamp="1603674377553">
@@ -124,6 +126,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="574" y="231" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603680796623" />
+    <state x="580" y="184" key="FileChooserDialogImpl" timestamp="1603769082091">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860/1600.217.1360.728@0.0.1600.860" timestamp="1603769082091" />
     <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1603692712416">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
